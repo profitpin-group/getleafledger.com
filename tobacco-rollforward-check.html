@@ -78,7 +78,7 @@
     <p>It reconciles each class and prepares TTB and FDA report drafts for you to review, on your own Windows computer. $199.00/month, 30-day no-card trial.</p>
     <a class="btn" href="https://license.getleafledger.com/trial">Start free trial ↗</a>
   </div>
-</main>
+<aside class="ms-store-cta" style="margin:40px 0 8px;padding:20px 22px;border:1px solid rgba(127,127,127,.35);border-radius:10px;display:flex;flex-wrap:wrap;gap:16px;align-items:center"><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&cid=ll-tobacco-rollforward-check" rel="noopener"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="180" alt="Get LeafLedger from the Microsoft Store"></a><p style="margin:0;flex:1 1 260px">LeafLedger is in the Microsoft Store. Microsoft checks and signs Store apps, so Windows installs it without an unknown-publisher warning.</p></aside></main>
 <script>
 const SCALE=6n, ONE=10n**SCALE;
 function dec(s){s=String(s==null?'':s).replace(/[$,\s]/g,'');if(s==='')return 0n;if(!/^-?\d*\.?\d*$/.test(s)||s==='.'||s==='-')return null;const neg=s[0]==='-';if(neg)s=s.slice(1);const parts=s.split('.');const frac=(parts[1]||'');if(frac.length>Number(SCALE))return null;const v=BigInt(parts[0]||'0')*ONE+BigInt((frac+'000000').slice(0,6));return neg?-v:v}
