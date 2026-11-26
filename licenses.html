@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Third-party notices — LeafLedger</title>
+<meta name="description" content="Open-source components used in LeafLedger and their licenses.">
+<link rel="canonical" href="https://getleafledger.com/licenses.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23112c25'/%3E%3Cpath d='M11 10v20h18v-5H16V10z' fill='%23c4ef97'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./styles.css">
+<style>
+  .legal-header { background: var(--forest); color: white; }
+  .legal-intro { padding: 52px 0 6px; }
+  .legal-intro h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 54px); letter-spacing: -1.8px; margin-bottom: 12px; }
+  .legal-intro .eyebrow { color: #5b7063; margin-bottom: 14px; }
+  .legal-meta { font-size: 12px; letter-spacing: 1.2px; color: var(--muted); margin: 0 0 30px; }
+  .legal-layout { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; padding-bottom: 80px; }
+  .legal-toc { position: sticky; top: 24px; font-size: 12px; }
+  .legal-toc strong { display: block; font-size: 11px; letter-spacing: 1.6px; color: #5b7063; margin-bottom: 10px; }
+  .legal-toc a { display: block; padding: 6px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+  .legal-toc a:hover { color: var(--ink); }
+  .legal-body h2 { font-family: Georgia, serif; font-weight: 400; font-size: 26px; letter-spacing: -.6px; margin: 40px 0 10px; }
+  .legal-body section:first-child h2 { margin-top: 0; }
+  .legal-body p, .legal-body li { max-width: 68ch; font-size: 15.5px; line-height: 1.7; }
+  .legal-body ul { padding-left: 22px; }
+  .plain { border-left: 3px solid var(--forest); background: var(--paper); padding: 12px 16px; margin: 0 0 18px; max-width: 68ch; font-size: 15px; border-radius: 0 6px 6px 0; }
+  .plain strong { display: block; font-size: 11px; letter-spacing: 1.6px; color: #5b7063; margin-bottom: 4px; }
+  .legal-body code { font-family: Consolas, monospace; font-size: .92em; background: var(--paper); border: 1px solid var(--line); padding: 1px 5px; border-radius: 3px; }
+  .legal-body table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  .legal-body th, .legal-body td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .legal-body th { font-size: 11px; letter-spacing: 1.5px; color: var(--muted); }
+  .legal-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; }
+  .footer-legal { width: 100%; font-size: 12px; color: var(--muted); line-height: 1.7; }
+  @media (max-width: 860px) { .legal-layout { grid-template-columns: 1fr; gap: 20px; } .legal-toc { position: static; } }
+</style>
+  <link rel="apple-touch-icon" href="/icon-512.png">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="legal-header"><header class="header wrap">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a>
+    <nav aria-label="Main navigation"><a href="./#workflow">How it works</a><a href="./#coverage">Reporting scope</a><a href="./#pricing">Pricing</a><a href="./#questions">Questions</a><a class="nav-contact" href="mailto:support@getleafledger.com">Contact us <span aria-hidden="true">↗</span></a></nav>
+  </header></div>
+  <main id="main" class="wrap">
+    <div class="legal-intro">
+      <p class="eyebrow">THIRD-PARTY NOTICES</p>
+      <h1>Open-source components in LeafLedger.</h1>
+      <p class="legal-meta">EFFECTIVE SEPTEMBER 15, 2026 · PROFITPIN LLC · SUPPORT@GETLEAFLEDGER.COM</p>
+    </div>
+    <div class="legal-layout">
+      <nav class="legal-toc" aria-label="On this page"><strong>ON THIS PAGE</strong><a href="#about">About these notices</a><a href="#components">Components</a><a href="#contact">Questions</a></nav>
+      <div class="legal-body">
+      <section id="about">
+        <h2>About these notices</h2>
+        <p>LeafLedger is built with open-source components, each used under its own license, listed below with links to the full text. These licenses apply to those components; LeafLedger itself is licensed under the <a href="./terms.html">Terms of Service</a>. Copies of the license texts are also included with the Windows application.</p>
+      </section>
+      <section id="components">
+        <h2>Components</h2>
+        <table><thead><tr><th>Component</th><th>License</th><th></th></tr></thead><tbody>
+        <tr><td>Python</td><td>Python Software Foundation License</td><td><a href="https://docs.python.org/3/license.html">License</a></td></tr>
+        <tr><td>openpyxl, et_xmlfile</td><td>MIT</td><td><a href="https://foss.heptapod.net/openpyxl/openpyxl/-/blob/branch/3.1/LICENCE.rst">License</a></td></tr>
+        <tr><td>jsonschema</td><td>MIT</td><td><a href="https://github.com/python-jsonschema/jsonschema/blob/main/COPYING">License</a></td></tr>
+        <tr><td>cryptography</td><td>Apache-2.0 / BSD-3-Clause</td><td><a href="https://github.com/pyca/cryptography/blob/main/LICENSE">License</a></td></tr>
+        <tr><td>pypdf</td><td>BSD-3-Clause</td><td><a href="https://github.com/py-pdf/pypdf/blob/main/LICENSE">License</a></td></tr>
+        <tr><td>pikepdf (with QPDF)</td><td>MPL-2.0 (QPDF: Apache-2.0)</td><td><a href="https://github.com/pikepdf/pikepdf/blob/main/LICENSE.txt">License</a></td></tr>
+        <tr><td>ReportLab Toolkit</td><td>BSD-3-Clause</td><td><a href="https://github.com/MrBitBucket/reportlab-mirror/blob/master/LICENSE">License</a></td></tr>
+        <tr><td>PyInstaller (bundler)</td><td>GPL-2.0-or-later with the bootloader exception permitting distribution of bundled applications under their own license</td><td><a href="https://github.com/pyinstaller/pyinstaller/blob/develop/COPYING.txt">License</a></td></tr>
+        </tbody></table>
+        <p>Official TTB and FDA form templates reproduced by the App are US government works in the public domain.</p>
+      </section>
+      <section id="contact">
+        <h2>Questions</h2>
+        <p><a href="mailto:support@getleafledger.com">support@getleafledger.com</a></p>
+      </section>
+      </div>
+    </div>
+  </main>
+  <footer class="wrap footer"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a><p>© 2026 Profitpin LLC. LeafLedger.</p><div class="legal-links"><a href="./terms.html">Terms</a><a href="./privacy.html">Privacy</a><a href="./refunds.html">Refunds &amp; cancellation</a><a href="./licenses.html">Third-party notices</a><a href="mailto:support@getleafledger.com">Contact</a></div><p class="footer-legal">LeafLedger prepares report drafts; it does not file, certify, or give tax or legal advice. TTB and FDA are US government agencies; LeafLedger is independent software and is not affiliated with, endorsed by, or approved by them.</p></footer>
+<script src="/lead-source.js" defer></script></body>
+</html>

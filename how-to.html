@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to Use LeafLedger Tobacco Excise Tax Reporting Software | LeafLedger</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LeafLedger">
+  <meta property="og:title" content="How to Use LeafLedger Tobacco Excise Tax Reporting Software">
+  <meta property="og:description" content="Step-by-step help: start the free trial, import your monthly records, reconcile inventory and prepare TTB 5210.5, TTB 5220.6 and FDA 3852 drafts on Windows.">
+  <meta property="og:url" content="https://getleafledger.com/how-to.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="description" content="Step-by-step help for LeafLedger: start the free 30-day trial, import monthly CSV or Excel records, reconcile tobacco inventory and prepare TTB 5210.5, TTB 5220.6 and FDA 3852 drafts.">
+  <meta name="theme-color" content="#112c25">
+  <link rel="canonical" href="https://getleafledger.com/how-to.html">
+  <link rel="icon" href="/icon-512.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .tutorial{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+    .tutorial h1{font-size:clamp(30px,6vw,38px);line-height:1.15;letter-spacing:-1px;margin:8px 0 14px}
+    .tutorial h2{font-size:24px;line-height:1.25;margin:44px 0 10px;scroll-margin-top:20px}
+    .tutorial h3{font-size:19px;margin:28px 0 8px}
+    .tutorial p,.tutorial li{color:var(--ink);line-height:1.6}
+    .tutorial ol li,.tutorial ul li{margin-bottom:6px}
+    .muted{color:var(--muted);font-size:15px}
+    .toc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:16px 22px;margin:22px 0}
+    .toc ol{margin:6px 0 0;padding-left:20px}
+    .toc a{text-decoration:underline;text-underline-offset:3px}
+    .tutorial main a,.tutorial p a,.tutorial li a{text-decoration:underline;text-underline-offset:3px}
+    .notice{background:#fbecd3;color:#5d3d0a;padding:12px 16px;border-radius:6px;margin:18px 0}
+    code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:1px 5px;overflow-wrap:anywhere}
+    .faq h3{font-size:17px;margin:22px 0 6px}
+    .top{font-size:14px;color:var(--muted)}
+  </style>
+  <link rel="apple-touch-icon" href="/icon-512.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is LeafLedger for a tobacco shop's monthly tax report?","acceptedAnswer":{"@type":"Answer","text":"No. LeafLedger is for businesses that hold a TTB permit as a domestic manufacturer of tobacco products or as a tobacco importer. Retail tobacco shops and smoke shops without a TTB reporting obligation are not who it is built for."}},{"@type":"Question","name":"Is LeafLedger for a tobacco distributor's monthly report?","acceptedAnswer":{"@type":"Answer","text":"No. Distributors and wholesalers with no TTB reporting obligation are not who it is built for."}},{"@type":"Question","name":"Does LeafLedger do vape tax reporting or state tobacco tax returns?","acceptedAnswer":{"@type":"Answer","text":"No. LeafLedger prepares drafts of federal TTB and FDA forms. It does not prepare state excise tax returns, and vapes are not among the product classes it lists."}},{"@type":"Question","name":"Does LeafLedger cover other tobacco products (OTP)?","acceptedAnswer":{"@type":"Answer","text":"Yes, for manufacturers and importers. The product classes in the app are small and large cigarettes, small and large cigars, pipe tobacco, roll-your-own tobacco, chewing tobacco, snuff, cigarette papers, cigarette tubes and processed tobacco."}},{"@type":"Question","name":"Does LeafLedger file my tobacco tax report?","acceptedAnswer":{"@type":"Answer","text":"No. LeafLedger prepares drafts. You review them, and you or your representative sign and submit them."}}]}</script>
+</head>
+<body><div id="ppg-home-strip" style="background:#0b211b;color:#fff;font:600 15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;padding:10px 16px;text-align:center;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;align-items:center"><span>Free 30-day trial. No card, no automatic charge.</span><a href="https://license.getleafledger.com/trial" style="background:#fff;color:#0b211b;padding:7px 14px;border-radius:6px;text-decoration:none;font-weight:700">Start free trial</a><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&amp;cid=ll-strip-howto" style="color:#fff;text-decoration:underline;text-underline-offset:3px">or get it from the Microsoft Store</a></div>
+  <div class="dark-opening">
+    <header class="header wrap">
+      <a class="brand" href="./" aria-label="LeafLedger home"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a>
+    </header>
+  </div>
+  <main class="tutorial" id="main">
+    <p class="eyebrow">LEAFLEDGER HELP</p>
+    <h1>How to use LeafLedger tobacco excise tax reporting software</h1>
+    <p>Short answers for new customers. LeafLedger is Windows software for TTB-permitted tobacco manufacturers and importers. It reconciles your monthly records and prepares TTB 5210.5, TTB 5220.6 and FDA 3852 drafts. It does not file anything for you.</p>
+    <p>Want to practise first? The <a href="./tutorial.html">first-month tutorial</a> has a video and a practice workspace with fictional records.</p>
+
+    <div class="toc"><strong>On this page</strong>
+      <ol>
+        <li><a href="#get-app">How to download LeafLedger for Windows</a></li>
+        <li><a href="#trial">How to start the free 30-day trial</a></li>
+        <li><a href="#setup">How to set up your tobacco business</a></li>
+        <li><a href="#import">How to import monthly records from CSV or Excel</a></li>
+        <li><a href="#reconcile">How to reconcile cigarette and tobacco inventory each month</a></li>
+        <li><a href="#ttb-5210-5">How to fill out TTB Form 5210.5</a></li>
+        <li><a href="#ttb-5220-6">How to prepare the TTB 5220.6 importer report</a></li>
+        <li><a href="#fda-3852">How to prepare the FDA 3852 tobacco user fee report</a></li>
+        <li><a href="#checks">How to read and fix the checks LeafLedger flags</a></li>
+        <li><a href="#export">How to save, print or export your drafts</a></li>
+        <li><a href="#backup">How to back up or move to another computer</a></li>
+        <li><a href="#subscribe">How to subscribe after the free trial</a></li>
+        <li><a href="#cancel">How to cancel or get a refund</a></li>
+        <li><a href="#help">How to get help</a></li>
+        <li><a href="#faq">Who LeafLedger is for: shops, distributors, vape and OTP</a></li>
+      </ol></div>
+
+    <h2 id="get-app">How do I download LeafLedger for Windows?</h2>
+    <ol>
+      <li>Recommended: <a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&amp;cid=ll-index">get LeafLedger from the Microsoft Store</a>. Microsoft checks and signs Store apps, so Windows installs it without an unknown-publisher warning.</li>
+      <li>Or download <a href="https://github.com/profitpin-group/getleafledger.com/releases/latest/download/LeafLedger-Setup.exe">the installer</a>. If Windows shows a "protected your PC" notice, choose <strong>More info</strong> → <strong>Run anyway</strong>.</li>
+      <li>Open LeafLedger from the Start menu (or the desktop icon if you used the installer). It opens in your web browser. The page runs on your own computer.</li>
+      <li>The first time, read the one-time agreement, tick the box and click <strong>I agree</strong>.</li>
+    </ol>
+    <p>To close the app, click <strong>Quit LeafLedger</strong> at the top of the page.</p>
+
+    <h2 id="trial">How do I start the free 30-day trial?</h2>
+    <p>You need an email address. No card. The trial ends without a charge or automatic renewal.</p>
+    <ol>
+      <li>Go to <a href="https://license.getleafledger.com/trial">license.getleafledger.com/trial</a>.</li>
+      <li>Enter your email, tick the box to agree to the Terms and Privacy Policy, and click <strong>Send verification code</strong>.</li>
+      <li>Check your inbox (and spam). Type the 8-digit code. It expires in 10 minutes.</li>
+      <li>Click <strong>Verify and activate trial</strong>. Your license key appears (it starts with <code>LL-</code>). Click <strong>Copy key</strong>.</li>
+      <li>In LeafLedger, paste the key into <strong>License key</strong> under <strong>Subscription</strong> and click <strong>Activate</strong>. The app shows how many trial days are left.</li>
+      <li>On the <strong>Welcome to LeafLedger</strong> screen, type your <strong>Business name</strong>, choose <strong>What the business does</strong>, and click <strong>Create workspace</strong>. Choose the first option unless the business holds only a processed-tobacco manufacturer permit.</li>
+    </ol>
+    <p class="muted">One trial per email account. Going back to the trial page restores the same trial; it does not restart it.</p>
+
+    <h2 id="setup">How do I set up my tobacco business in LeafLedger?</h2>
+    <p>You do this once. Open <strong>Setup</strong>. Describe the business exactly as TTB and FDA know it.</p>
+    <ol>
+      <li><strong>Companies</strong>: enter a short Id and the Legal name. Click <strong>Add company</strong>.</li>
+      <li><strong>Permits and reporting scopes</strong>: pick the company, the Role (<em>Manufacturer (TTB 5210.5)</em> or <em>Importer (TTB 5220.6)</em>) and the Permit number. Click <strong>Add permit</strong>. Then add each product class the permit reports and click <strong>Add scope</strong>. A permit with no scope is flagged as required.</li>
+      <li><strong>Products</strong>: enter an Id (for example your SKU), Name, Class, Origin (domestic or imported) and Base unit. Click <strong>Add product</strong>. To add another unit, type it in the Units column, for example <code>thousand_sticks=1000</code>.</li>
+      <li><strong>Source file layouts</strong>: click <strong>Add profile with standard columns</strong>, then <strong>Edit columns</strong> if your file uses other headers. See the <a href="#import">next section</a>.</li>
+      <li><strong>Account mapping</strong>: map each value in your Account column to one LeafLedger transaction type and click <strong>Map</strong>. If your file already uses LeafLedger's names, click <strong>Use standard names</strong>.</li>
+      <li><strong>Evidence documents</strong>: add copies such as TTB, CBP or FDA forms and operations records for a month. Click <strong>Add evidence</strong>.</li>
+      <li><strong>Company identity for the forms</strong>: EIN, Contact name, Telephone, Email and Mailing address.</li>
+      <li><strong>Mapping approval</strong>: the person responsible enters their name under <strong>Approved by</strong> and clicks <strong>Use now</strong>.</li>
+      <li>Click <strong>Save setup</strong>. When nothing is missing you see <strong>Saved — setup complete</strong>. Otherwise the page lists what to complete.</li>
+    </ol>
+
+    <h2 id="import">How do I import monthly tobacco records from CSV or Excel?</h2>
+    <p>LeafLedger reads <strong>UTF-8 CSV</strong> files and <strong>Excel .xlsx</strong> files. Older .xls files are not read; save them as .xlsx or CSV first.</p>
+    <p>Your file needs one column for each of these facts. These are the standard header names (click <strong>Download standard CSV template</strong> in Setup to get them):</p>
+    <p><code>Transaction ID</code> <code>Company</code> <code>Permit</code> <code>Transaction Date</code> <code>SKU</code> <code>Account</code> <code>Quantity</code> <code>Unit</code> <code>Tax Paid</code> <code>Document</code></p>
+    <p>Optional standard columns: <code>Entry Number</code>, <code>Reversal Of</code>, <code>Source Form</code>, <code>Source Field</code>, <code>Source Record</code>, <code>Source Period</code>, <code>Adjustment Basis</code>, <code>Adjustment Reason</code>, <code>Customs Regime</code>. If your headers are different, use <strong>Edit columns</strong> to match them. For an Excel file, the profile's sheet name (default <code>Records</code>) must match the sheet in your file.</p>
+    <ol>
+      <li>Open <strong>Monthly cycle</strong>.</li>
+      <li>Type the <strong>Reporting month</strong> as year-month, for example <code>2026-09</code>, and click <strong>Load month</strong>.</li>
+      <li>Choose the <strong>Profile</strong>, choose the file, and click <strong>Add source</strong>. Repeat for each file that month.</li>
+    </ol>
+
+    <h2 id="reconcile">How do I reconcile cigarette and tobacco inventory each month?</h2>
+    <ol>
+      <li>In <strong>Monthly cycle</strong>, under <strong>Plan</strong>, pick last month's result in <strong>Previous month's filing (continuity)</strong>. This lets LeafLedger check this month's opening stock against last month's closing stock. For your first month, leave <em>— first month —</em>.</li>
+      <li>Click <strong>Prepare this month</strong>. LeafLedger reads every row, checks every rule and renders the drafts.</li>
+      <li>Read the result and click <strong>Open review</strong>.</li>
+      <li>If you prepare the same month again, enter a <strong>Correction reason</strong>. Each preparation is saved as a new result; nothing is overwritten.</li>
+      <li>After the first preparation, you can choose extra items under <strong>Selections after the first preparation</strong> (for example a filing jurisdiction such as <code>US-CO</code> for deadlines) and click <strong>Prepare again with these selections</strong>.</li>
+    </ol>
+    <p>Preparing a month needs an active trial or subscription. For the idea behind the check, see the <a href="./tobacco-rollforward-check.html">free roll-forward check</a> and <a href="./tobacco-import-accounting-reconciliation.html">reconciling records before monthly reporting</a>.</p>
+
+    <h2 id="ttb-5210-5">How to fill out TTB Form 5210.5 with LeafLedger</h2>
+    <p>LeafLedger prepares a 5210.5 draft for each permit set up with the <em>Manufacturer (TTB 5210.5)</em> role.</p>
+    <ol>
+      <li>Set up the manufacturer permit, its product classes and products (<a href="#setup">Setup</a>).</li>
+      <li>Add the month's files and click <strong>Prepare this month</strong> (<a href="#import">Monthly cycle</a>).</li>
+      <li>Open <strong>Review &amp; export</strong>. Find the card <strong>TTB 5210.5 draft</strong>. Each line shows the <strong>Draft value</strong> and <strong>Where it comes from</strong>. Zero lines are hidden; click <strong>Show … zero line(s)</strong> to see them.</li>
+      <li>Check every line against your own records before anyone signs.</li>
+    </ol>
+    <p>Form background: <a href="./ttb-5210-5-monthly-report.html">TTB 5210.5 guide</a> · <a href="./ttb-5210-5-spreadsheet-template.html">spreadsheet method</a>.</p>
+
+    <h2 id="ttb-5220-6">How to prepare the TTB 5220.6 importer report</h2>
+    <ol>
+      <li>Set up the permit with the <em>Importer (TTB 5220.6)</em> role, and set imported products to Origin <em>imported</em>.</li>
+      <li>Add the month's importer file with an importer profile, then click <strong>Prepare this month</strong>.</li>
+      <li>In <strong>Review &amp; export</strong>, read the <strong>TTB 5220.6 draft</strong> card line by line.</li>
+      <li>If the review asks for an official copy such as CBP 7501, add it under <strong>Evidence documents</strong> in Setup for that month and prepare again.</li>
+    </ol>
+    <p>Form background: <a href="./ttb-5220-6-importer-report.html">TTB 5220.6 importer guide</a>.</p>
+
+    <h2 id="fda-3852">How to prepare the FDA 3852 tobacco user fee report</h2>
+    <ol>
+      <li>Prepare the month as above. The FDA 3852 draft is built from the same records.</li>
+      <li>In <strong>Review &amp; export</strong>, find the <strong>FDA 3852 draft</strong> card and check each line and its source.</li>
+      <li>Fix anything flagged, then save or print the draft (<a href="#export">see below</a>).</li>
+    </ol>
+    <p>Form background: <a href="./fda-3852-tobacco-user-fee-report.html">FDA 3852 guide</a> · <a href="./tobacco-tax-report-questions.html">reporting questions</a>.</p>
+
+    <h2 id="checks">How do I read and fix the checks LeafLedger flags?</h2>
+    <p>LeafLedger never guesses a missing fact. It shows it, so you can fix it. Open <strong>Review &amp; export</strong>, pick the <strong>Result</strong> and click <strong>Load</strong>.</p>
+    <ol>
+      <li>Read <strong>Status</strong>. <strong>Numbers</strong> shows <em>RECONCILED</em> or <em>NEED ATTENTION</em>. It also shows the month's state, <strong>Blocking exceptions</strong> and <strong>Open items</strong>.</li>
+      <li><strong>Exceptions in the numbers</strong> lists each problem with its code and the source row.</li>
+      <li><strong>Filing readiness gaps</strong> has a <strong>What to do</strong> column. <strong>Monthly checks</strong> has a <strong>What it means</strong> column.</li>
+      <li>Fix the cause in Setup or in your source file, save, and prepare the month again with a correction reason.</li>
+    </ol>
+    <p>Common codes:</p>
+    <ul>
+      <li><code>PREVIOUS_FILING_REQUIRED</code> — pick last month's filing under Plan.</li>
+      <li><code>MISSING_OFFICIAL_SUPPORT</code> — add the named official copy (for example TTB 5000.24 or CBP 7501) as evidence for the month.</li>
+      <li><code>OFFICIAL_RENDERING_UNVALIDATED</code> — drafts are watermarked; review the PDF against your own records.</li>
+      <li>An account value with no mapping stops the month. Add it under <strong>Account mapping</strong>.</li>
+    </ul>
+    <p>Practise this safely in step 6 of the <a href="./tutorial.html#missing">tutorial</a>.</p>
+
+    <h2 id="export">How do I save, print or export my drafts?</h2>
+    <p>At the top of the loaded result in <strong>Review &amp; export</strong>:</p>
+    <ol>
+      <li><strong>Print / save as PDF</strong> prints the on-screen summary.</li>
+      <li><strong>Export CSV (draft lines)</strong> saves every draft line, its value, unit and basis.</li>
+      <li><strong>Email summary</strong> opens your email program with a short summary. Attach the PDFs yourself.</li>
+      <li>The draft PDFs are listed under <strong>Exported files</strong>. Click <strong>Open output folder</strong> to see them on your computer.</li>
+      <li>When nothing is left unresolved, <strong>Reviewed copies</strong> shows <strong>Mark reviewed and produce clean copies</strong>. Until then it explains why the button isn't there yet.</li>
+    </ol>
+    <p>Reviewing and exporting months you already prepared does not need an active subscription.</p>
+
+    <h2 id="backup">How do I back up LeafLedger or move it to another computer?</h2>
+    <p>Everything is in one workspace folder on your computer. By default it is a folder named <code>LeafLedger</code> in your Windows user folder. <strong>Open workspace folder</strong> on the Overview shows it.</p>
+    <h3>Encrypted backup</h3>
+    <ol>
+      <li>On <strong>Overview</strong>, under <strong>Encrypted backup</strong>, type a passphrase of 12 or more characters.</li>
+      <li>Click <strong>Create backup</strong>. The file is written to the workspace's <code>backups</code> folder.</li>
+      <li>Copy that file somewhere safe. The passphrase is never stored. Without it, the backup cannot be opened.</li>
+    </ol>
+    <h3>Move to another computer</h3>
+    <ol>
+      <li>Click <strong>Quit LeafLedger</strong>.</li>
+      <li>Copy the whole workspace folder to the same place on the new computer.</li>
+      <li>Install LeafLedger there, accept the agreement, and enter your license key under <strong>Subscription</strong>.</li>
+    </ol>
+    <p class="muted">Your subscription covers computers your business controls, for one permittee business.</p>
+
+    <h2 id="subscribe">How do I subscribe after the free trial?</h2>
+    <p>The paid plan is US $199.00 per month plus applicable taxes. Month to month. When the trial ends, nothing is charged and your saved records stay; only preparing new months stops.</p>
+    <ol>
+      <li>Go to <a href="https://license.getleafledger.com/trial">license.getleafledger.com/trial</a> and verify the same email again. This shows your key; it does not restart the trial.</li>
+      <li>Click <strong>View paid subscription checkout</strong> and complete the Stripe checkout. Billing starts right away and renews monthly until you cancel.</li>
+      <li>The next page shows your license key. Click <strong>Copy key</strong>.</li>
+      <li>In LeafLedger, paste it into <strong>License key</strong> under <strong>Subscription</strong> and click <strong>Save key</strong>. It should say <em>Subscription active.</em></li>
+    </ol>
+    <p class="muted">The app checks your key about every six hours. If you are offline, it keeps working for seven days on the last confirmation.</p>
+
+    <h2 id="cancel">How do I cancel or get a refund?</h2>
+    <p>The no-card trial does not need cancelling. It ends without a charge.</p>
+    <h3>Cancel a paid subscription</h3>
+    <ol>
+      <li>Open your billing page (the <strong>Manage your subscription</strong> link on the page shown after checkout) and choose <strong>Cancel</strong>. It takes effect immediately for future charges.</li>
+      <li>Or email <a href="mailto:support@getleafledger.com">support@getleafledger.com</a> from your subscription address. We cancel within one business day.</li>
+    </ol>
+    <p>Access continues to the end of the paid period. Everything saved on your computer stays readable.</p>
+    <h3>Refunds</h3>
+    <p>We don't prorate or refund a monthly charge for unused days after you cancel. We refund a charge in full if you were charged for a renewal after you cancelled before the renewal date (or, for an older card-based trial, before that trial ended), you were charged twice for the same period, or the App could not run on your Windows computer and we couldn't fix it within a reasonable time after you contacted support. Email <a href="mailto:support@getleafledger.com">support@getleafledger.com</a> within 30 days of the charge. Full details: <a href="./refunds.html">Refunds &amp; cancellation</a> and <a href="./terms.html">Terms</a>.</p>
+
+    <h2 id="help">How do I get help with LeafLedger?</h2>
+    <ol>
+      <li>Email <a href="mailto:support@getleafledger.com">support@getleafledger.com</a>. Support is in English, during US business hours; we aim to answer within one business day.</li>
+      <li>Say what you clicked, what you saw (the code, if any) and the software version shown at the top of the app.</li>
+      <li>Do not send tax, customs or transaction records unless we ask. Use fictional examples.</li>
+    </ol>
+    <p class="muted">Support covers installing and using the App and understanding its outputs. It does not prepare your filings or give legal or tax advice.</p>
+
+    <section class="faq" id="faq">
+      <h2>Is LeafLedger for tobacco shops, distributors or vape taxes?</h2>
+      <h3>Is LeafLedger for a tobacco shop's monthly tax report?</h3>
+      <p>No. LeafLedger is for businesses that hold a TTB permit as a domestic manufacturer of tobacco products or as a tobacco importer. Retail tobacco shops and smoke shops without a TTB reporting obligation are not who it is built for.</p>
+      <h3>Is LeafLedger for a tobacco distributor's monthly report?</h3>
+      <p>No. Distributors and wholesalers with no TTB reporting obligation are not who it is built for.</p>
+      <h3>Does LeafLedger do vape tax reporting or state tobacco tax returns?</h3>
+      <p>No. LeafLedger prepares drafts of federal TTB and FDA forms. It does not prepare state excise tax returns, and vapes are not among the product classes it lists.</p>
+      <h3>Does LeafLedger cover other tobacco products (OTP)?</h3>
+      <p>Yes, for manufacturers and importers. The product classes in the app are small and large cigarettes, small and large cigars, pipe tobacco, roll-your-own tobacco, chewing tobacco, snuff, cigarette papers, cigarette tubes and processed tobacco.</p>
+      <h3>Does LeafLedger file my tobacco tax report?</h3>
+      <p>No. LeafLedger prepares drafts. You review them, and you or your representative sign and submit them.</p>
+    </section>
+
+    <p class="top"><a href="#main">Back to top</a></p>
+    <p><a class="button button-lime" href="./">← Back to getleafledger.com</a></p>
+  <aside class="ms-store-cta" style="margin:40px 0 8px;padding:20px 22px;border:1px solid rgba(127,127,127,.35);border-radius:10px;display:flex;flex-wrap:wrap;gap:16px;align-items:center"><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&cid=ll-howto" rel="noopener"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="180" alt="Get LeafLedger from the Microsoft Store"></a><p style="margin:0;flex:1 1 260px">LeafLedger is in the Microsoft Store. Microsoft checks and signs Store apps, so Windows installs it without an unknown-publisher warning.</p></aside></main>
+    <footer class="wrap footer" style="flex-wrap:wrap"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a><p>© 2026 Profitpin LLC. LeafLedger.</p><span style="display:flex;gap:18px;flex-wrap:wrap"><a href="./ttb-5210-5-monthly-report.html">TTB 5210.5 guide</a><a href="./fda-3852-tobacco-user-fee-report.html">FDA 3852 guide</a><a href="./ttb-5210-5-spreadsheet-template.html">Spreadsheet method</a><a href="./tobacco-tax-report-questions.html">Reporting questions</a><a href="./tutorial.html">Tutorial</a><a href="./terms.html">Terms</a><a href="./privacy.html">Privacy</a><a href="./refunds.html">Refunds &amp; cancellation</a><a href="./licenses.html">Third-party notices</a><a href="mailto:support@getleafledger.com">Contact</a></span><p style="width:100%;font-size:12px;color:var(--muted);line-height:1.7;margin-top:8px">LeafLedger prepares report drafts; it does not file, certify, or give tax or legal advice. TTB and FDA are US government agencies; LeafLedger is independent software and is not affiliated with, endorsed by, or approved by them.</p></footer>
+<script src="/lead-source.js" defer></script></body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your LeafLedger license — LeafLedger</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LeafLedger">
+  <meta property="og:title" content="LeafLedger — TTB 5210.5 / 5220.6 & FDA 3852 tobacco reporting software for manufacturers and importers">
+  <meta property="og:description" content="Windows software that reconciles your monthly tobacco records and prepares TTB 5210.5, TTB 5220.6 and FDA 3852 report drafts with a full paper trail. Runs on your own computer. $199/month, 30-day no-card trial.">
+  <meta property="og:url" content="https://getleafledger.com/welcome.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://getleafledger.com/welcome.html">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#112c25">
+  <link rel="icon" href="/icon-512.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .welcome{max-width:680px;margin:0 auto;padding:40px 20px 80px}
+    .welcome h1{font-size:34px;line-height:1.15;margin:8px 0 14px}
+    .key-card{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:22px 24px;margin:24px 0}
+    .key-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .key{font-family:ui-monospace,Consolas,monospace;font-size:26px;font-weight:700;letter-spacing:.06em;color:var(--forest);margin:6px 0 12px;word-break:break-all;user-select:all}
+    .welcome ol{padding-left:22px}.welcome ol li{margin-bottom:12px}
+    .muted{color:var(--muted);font-size:15px}
+    .error{background:#f8dcda;color:#6b1a15;padding:12px 16px;border-radius:6px}
+    .hidden{display:none}
+    .quiet{background:none;border:1px solid var(--line);border-radius:6px;padding:8px 12px;font:inherit;cursor:pointer;color:var(--ink)}
+  </style>
+  <link rel="apple-touch-icon" href="/icon-512.png">
+</head>
+<body>
+  <div class="dark-opening">
+    <header class="header wrap">
+      <a class="brand" href="./" aria-label="LeafLedger home"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a>
+    </header>
+  </div>
+  <main class="welcome">
+    <div id="loading">
+      <p class="eyebrow">One moment</p>
+      <h1>Confirming your subscription…</h1>
+      <p class="muted">Fetching your license key from Stripe.</p>
+    </div>
+    <div id="ready" class="hidden">
+      <p class="eyebrow">You're set</p>
+      <h1 id="ready-title">Your subscription is active.</h1>
+      <p id="paid-note">This is a new license key for your paid subscription. It is not the same as a free-trial key. Use this key from now on.</p>
+      <p>Save this key. It is kept on file with your subscription. Bookmark this page to see it again, or email support from the address you used at checkout.</p>
+      <div class="key-card">
+        <span class="key-label">Your license key</span>
+        <div class="key" id="key">LL-····-····-····-····</div>
+        <div><button class="quiet" id="copy" type="button">Copy key</button> <span class="muted" id="copied" aria-live="polite"></span></div>
+      </div>
+      <ol>
+        <li><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&cid=ll-welcome"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Get it from Microsoft"></a><br><span class="muted">Recommended: install LeafLedger from the Microsoft Store, which Microsoft checks and signs. <a href="https://github.com/profitpin-group/getleafledger.com/releases/latest/download/LeafLedger-Setup.exe">Or download the installer</a> (if Windows shows a "protected your PC" notice, choose <em>More info → Run anyway</em>).</span></li>
+        <li>Open LeafLedger from the Start menu (or the desktop icon if you used the installer). It opens in your web browser; read and accept the one-time agreement.</li>
+        <li>New to LeafLedger? Paste the key into <strong>License key</strong> under <strong>Subscription</strong> and click <strong>Activate</strong>. Then follow the getting-started steps on the <strong>Overview</strong> page.</li>
+        <li>Already using a trial key? Open <strong>Overview</strong>. In the <strong>Subscription</strong> card, replace the old key in <strong>License key</strong> with this one and click <strong>Save key</strong>. It should say <em>Subscription active.</em> Your workspace and records stay as they are.</li>
+      </ol>
+      <p class="muted">First time? <a href="tutorial.html">Watch the five-minute walkthrough and try the practice workspace</a> before you use your own records.</p>
+      <p class="muted">Everything you enter stays on your computer. The app sends this key to confirm your subscription, plus a one-time anonymous count the first time it opens (product, Store or installer, version). Every output is a draft for your review — nothing is submitted to TTB or FDA.</p>
+      <p class="muted" id="billing"></p>
+      <p class="muted">Need to update your card or cancel? <a id="portal" href="#">Manage your subscription ↗</a>. Questions: <a href="mailto:support@getleafledger.com">support@getleafledger.com</a>.</p>
+      <p class="muted">Your subscription is governed by the <a href="terms.html">Terms of Service</a>, <a href="privacy.html">Privacy Policy</a>, and <a href="refunds.html">Refund &amp; cancellation policy</a>.</p>
+    </div>
+    <div id="lookup" class="hidden">
+      <p class="eyebrow">Find your key</p>
+      <h1>Looking for your license key?</h1>
+      <p>A paid key is shown on the page you saw right after checkout. If you bookmarked that page, open it again. A free-trial key is shown again when you verify your email on the <a href="https://license.getleafledger.com/trial">trial page</a>. Or write to <a href="mailto:support@getleafledger.com?subject=My%20LeafLedger%20license%20key">support@getleafledger.com</a> from the email address you used at checkout.</p>
+      <p class="muted"><a href="./">← Back to getleafledger.com</a></p>
+    </div>
+    <div id="failed" class="hidden">
+      <p class="eyebrow">Something's off</p>
+      <h1>We couldn't fetch your key.</h1>
+      <p class="error" id="failed-msg"></p>
+      <p>Your payment details are safe with Stripe either way. Reload this page in a minute, or email <a href="mailto:support@getleafledger.com?subject=LeafLedger%20license%20key">support@getleafledger.com</a> and we'll send it.</p>
+    </div>
+  </main>
+<script>
+(function () {
+  var SERVICE = "https://license.getleafledger.com";
+  var params = new URLSearchParams(location.search);
+  var sessionId = params.get("session_id");
+  function show(id) { ["loading", "ready", "lookup", "failed"].forEach(function (x) { document.getElementById(x).classList.toggle("hidden", x !== id); }); }
+  if (!sessionId) { show("lookup"); return; }
+  fetch(SERVICE + "/license?session_id=" + encodeURIComponent(sessionId))
+    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, body: j }; }); })
+    .then(function (res) {
+      if (!res.ok || !res.body.license_key) { throw new Error(res.body && res.body.error ? res.body.error : "unexpected response"); }
+      var key = res.body.license_key;
+      document.getElementById("key").textContent = key;
+      document.getElementById("portal").href = SERVICE + "/portal?key=" + encodeURIComponent(key);
+      if (res.body.status === "trialing") {
+        // Older card-based trial: this checkout started a trial, not a paid month.
+        document.getElementById("ready-title").textContent = "Your free trial starts now.";
+        document.getElementById("paid-note").hidden = true;
+      }
+      if (res.body.status === "trialing" && res.body.trial_end) {
+        var end = new Date(res.body.trial_end * 1000);
+        document.getElementById("billing").textContent = "Your first charge of $199.00 is on " + end.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" }) + ". Cancel before then and you won't be charged.";
+      }
+      document.getElementById("copy").addEventListener("click", function () {
+        navigator.clipboard.writeText(key).then(function () { document.getElementById("copied").textContent = "Copied."; }, function () { document.getElementById("copied").textContent = "Select the key and copy it."; });
+      });
+      show("ready");
+    })
+    .catch(function (e) { document.getElementById("failed-msg").textContent = String(e.message || e); show("failed"); });
+})();
+</script>
+<script src="/lead-source.js" defer></script></body>
+</html>

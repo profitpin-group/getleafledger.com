@@ -1,0 +1,45 @@
+LeafLedger — Your first month
+Narrated walkthrough with fictional practice records
+
+00:00 — Get your free trial
+Before the walkthrough, here is how you get LeafLedger. Start your free 30-day LeafLedger trial at the trial page. Enter your email, then the eight-digit code sent to your inbox. Copy your trial key and get LeafLedger from the Microsoft Store. No card is needed, and starting the trial won't charge you. Open LeafLedger, read the one-time agreement, tick the box, and click I agree. Paste your trial key, click Activate, and name your workspace folder. Now the walkthrough begins.
+
+
+00:36 — Getting started
+Welcome to LeafLedger. This walkthrough uses real application screens and fictional practice records for two made-up companies, Riverbend Tobacco Works and Harbor Leaf Imports. Nothing here is a real business, and nothing you see is submitted to any agency. LeafLedger runs on your own computer, and your records stay there. The overview shows the four steps of every month: complete setup, add the month's files, prepare, review.
+
+01:08 — Your business, entered once
+Setup is where you describe the business exactly as TTB and FDA know it. The practice workspace is already filled in: the companies, each permit with its number, the product classes each permit reports, and the products with their units. For your own business you enter this once. LeafLedger never fills in a fact it cannot verify; it asks you.
+
+01:34 — Files and mappings
+Next, the source file layouts tell LeafLedger which column in your monthly export holds which fact. You can use the standard column names, or type the headings your own system produces. Below that, the account mapping links every value in your Account column to one reporting transaction type. An account that is not mapped stops the month. It is never guessed.
+
+02:00 — Choose the month
+Open Monthly cycle, type the reporting month, here August 2026, and click Load month. Each month has its own source files and its own results, and nothing from an earlier month is ever overwritten.
+
+02:16 — Add the month's exports
+Add the month's export files. In the practice set, that is one file from the manufacturer's records and one from the importer's, chosen with the matching profile. LeafLedger stores each file exactly as supplied and records its fingerprint, so a file that changes later can never be used silently.
+
+02:39 — Prepare the month
+Click Prepare this month. LeafLedger reads every row, checks every captured regulation, and renders the draft forms. On the first month there is no earlier filing to compare against; from the second month on, last month's filing is selected automatically so opening stock is checked against the previous closing stock.
+
+03:03 — The result
+Each preparation is archived with a time stamp and a result. The practice month comes back as Review required. That is the normal outcome: the numbers reconcile, and LeafLedger is telling you what still needs a human decision.
+
+03:21 — Status and what to do
+Review and export shows two things side by side. Numbers reconciled means every row added up, with zero blocking exceptions. Month, review required, means something still needs your attention. The open items below each say what to do: here, the official copies of the forms are not yet among the evidence. LeafLedger flags; it does not guess.
+
+03:48 — Every line traces back
+Further down are the draft forms, line by line. Line 7.d, the opening stock, is 100,000 sticks, and beside it LeafLedger names the source rows that produced it. Every number on every form traces back to your own records. Zero lines are folded away so you can read the lines that matter.
+
+04:11 — The draft PDF
+Each form is also rendered as a PDF on the official template, with the certification left blank. While anything is unresolved, the copy is stamped as a draft. You review it, you sign it, you file it. LeafLedger never files anything on your behalf.
+
+04:32 — Reviewed copies
+At the bottom of the review page is the reviewed copies card. When nothing is left unresolved, you enter your name and mark the month reviewed, and LeafLedger writes clean copies without the draft stamp, still unsigned. Until then, the card explains exactly why the button is not there yet: each open item, and what to do about it. A clean copy can never exist for a month with an open item.
+
+05:00 — History
+History lists every preparation ever made. Corrections are recorded as new versions that supersede the old ones; nothing is deleted, so you can always show what you prepared and when.
+
+05:15 — Keep it safe
+Finally, create an encrypted backup with a passphrase you choose. The passphrase is never stored, so keep it safe. That is the whole routine: setup once, then every month add the files, prepare, and review. Thanks for watching.

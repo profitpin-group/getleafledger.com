@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#112c25">
+  <link rel="icon" href="/icon-512.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .tutorial{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+    .tutorial h1{font-size:38px;line-height:1.1;margin:8px 0 14px}
+    .tutorial h2{font-size:24px;margin:40px 0 10px}
+    .tutorial h3{font-size:19px;margin:28px 0 8px}
+    .tutorial p,.tutorial li{color:var(--ink);line-height:1.6}
+    .muted{color:var(--muted);font-size:15px}
+    video{width:100%;max-width:100%;aspect-ratio:16/10;background:#000;border-radius:8px;border:1px solid var(--line)}
+    .links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:14px 0 6px}
+    .toc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:16px 22px;margin:22px 0}
+    .toc ol{margin:6px 0 0;padding-left:20px}
+    .notice{background:#fbecd3;color:#5d3d0a;padding:12px 16px;border-radius:6px;margin:18px 0}
+    code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+    ul.check{list-style:none;padding:0}ul.check li::before{content:"☐ ";color:var(--muted)}
+  </style>
+<title>TTB Form 5210.5 Monthly Report Guide | LeafLedger</title>
+<meta name="description" content="A plain-English guide for tobacco manufacturers: what TTB 5210.5 (and 5220.6 for importers) asks for each month, the records behind every line, the reconciliation that catches errors before TTB does, and a month-end checklist.">
+<link rel="canonical" href="https://getleafledger.com/ttb-5210-5-monthly-report.html">
+<meta property="og:type" content="article"><meta property="og:site_name" content="LeafLedger"><meta property="og:title" content="TTB Form 5210.5 Monthly Report Guide | LeafLedger"><meta property="og:description" content="A plain-English guide for tobacco manufacturers: what TTB 5210.5 (and 5220.6 for importers) asks for each month, the records behind every line, the reconciliation that catches errors before TTB does, and a month-end checklist."><meta property="og:url" content="https://getleafledger.com/ttb-5210-5-monthly-report.html"><meta name="twitter:card" content="summary">
+
+<style>
+  .g{max-width:860px;margin:0 auto;padding:40px 20px 80px;line-height:1.6}
+  .g h1{font-size:38px;line-height:1.1;margin:8px 0 14px}.g h2{font-size:24px;margin:40px 0 10px}.g h3{font-size:18px;margin:26px 0 6px}
+  .g p,.g li{max-width:720px}.g ul,.g ol{padding-left:22px}.g li{margin-bottom:7px}
+  .g .lede{font-size:18px;opacity:.85;max-width:720px}
+  .g .toc{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;margin:10px 0 0;letter-spacing:.02em}.g .toc a{text-decoration:none;opacity:.8}.g .toc a:hover{opacity:1;text-decoration:underline}
+  .g .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0 6px}
+  .g .cards div{border:1px solid rgba(0,0,0,.15);border-radius:8px;padding:14px 16px;background:rgba(255,255,255,.55)}
+  .g .cards .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}.g .cards .v{margin-top:6px;font-size:15px}
+  .g table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0 6px;background:rgba(255,255,255,.55)}
+  .g th,.g td{text-align:left;padding:9px 11px;border-bottom:1px solid rgba(0,0,0,.15);vertical-align:top}.g th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;font-weight:600}
+  .g .check{list-style:none;padding:0;max-width:720px}.g .check li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,.18)}.g .check li::before{content:"";width:15px;height:15px;border:1.5px solid currentColor;border-radius:3px;margin-top:5px;opacity:.7}
+  .g .note{border-left:3px solid currentColor;padding:10px 14px;margin:14px 0;max-width:720px;background:rgba(0,0,0,.04);font-size:15px}
+  .g .caution{background:rgba(160,40,40,.07);border-left-color:#7a2626}
+  .g .cta{border:1px solid rgba(0,0,0,.15);border-radius:10px;padding:24px 26px;margin-top:36px;background:rgba(255,255,255,.6)}
+  .g .cta h2{margin-top:0}.g .cta .btn{display:inline-block;padding:11px 20px;border-radius:6px;background:#173e32;color:#fff !important;text-decoration:none;font-weight:600;margin-top:8px}
+  @media print{header,footer,.g .cta,.g .toc{display:none}.g{padding:0}}
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "HowTo", "name": "TTB Form 5210.5 monthly report: what goes in it and how to reconcile it before you file", "description": "A plain-English guide for tobacco manufacturers: what TTB 5210.5 (and 5220.6 for importers) asks for each month, the records behind every line, the reconciliation that catches errors before TTB does, and a month-end checklist.", "step": [{"@type": "HowToStep", "name": "Carry-forward check", "text": "Each class's opening balance equals last month's filed closing."}, {"@type": "HowToStep", "name": "Book roll-forward", "text": "Opening plus manufactured, received and returned, minus every removal category, equals book closing, in exact arithmetic."}, {"@type": "HowToStep", "name": "Physical-to-book", "text": "Compare book closing with the counted inventory and explain every difference."}, {"@type": "HowToStep", "name": "Tax tie-out", "text": "Tax-paid removals times the class rate equals the tax on the return for the period."}, {"@type": "HowToStep", "name": "Document completeness", "text": "Every in-bond receipt, removal, export and destruction has its supporting document on file."}, {"@type": "HowToStep", "name": "Cross-form consistency", "text": "FDA 3852 removal figures match 5210.5."}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I still file TTB 5210.5 if there was no activity?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A report with zeros is different from a missing report; an explicit zero-activity declaration is a fact, a blank is a gap."}}, {"@type": "Question", "name": "How long must tobacco manufacturers keep the records behind 5210.5?", "acceptedAnswer": {"@type": "Answer", "text": "27 CFR Part 40 sets a minimum of three years from the date of the report, and TTB can extend it."}}, {"@type": "Question", "name": "Can software file TTB 5210.5 for me?", "acceptedAnswer": {"@type": "Answer", "text": "Software can prepare and validate the draft; the permittee's authorised officer reviews, certifies and files."}}]}]</script>
+  <link rel="apple-touch-icon" href="/icon-512.png">
+</head>
+<body><div id="ppg-home-strip" style="background:#0b211b;color:#fff;font:600 15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;padding:10px 16px;text-align:center;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;align-items:center"><span>Free 30-day trial. No card, no automatic charge.</span><a href="https://license.getleafledger.com/trial" style="background:#fff;color:#0b211b;padding:7px 14px;border-radius:6px;text-decoration:none;font-weight:700">Start free trial</a><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&amp;cid=ll-strip-ttb-5210-5-monthly-report" style="color:#fff;text-decoration:underline;text-underline-offset:3px">or get it from the Microsoft Store</a></div>
+  <div class="dark-opening">
+    <header class="header wrap">
+      <a class="brand" href="./" aria-label="LeafLedger home"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a>
+    </header>
+  </div>
+  
+<main class="g" id="main">
+  <p class="eyebrow">LEAFLEDGER · GUIDE</p>
+  <h1>TTB Form 5210.5: the monthly report, line by line, and the reconciliation that keeps it right.</h1>
+  <p class="lede">For domestic manufacturers of tobacco products (and importers, who file 5220.6 on the same rhythm): what the report is really asking, which records prove each number, the checks to run before you sign, and a checklist for month-end.</p>
+  <nav class="toc" aria-label="On this page"><a href="#what">What the form asks</a><a href="#records">The records behind it</a><a href="#recon">The reconciliation</a><a href="#errors">Common errors</a><a href="#checklist">Checklist</a><a href="#faq">Questions</a></nav>
+
+  <h2 id="what">What the form is actually asking</h2>
+  <p>TTB Form 5210.5, <i>Report – Manufacturer of Tobacco Products or Cigarette Papers and Tubes</i>, is a monthly inventory movement statement. For every class of product you make (cigarettes, cigars, chewing tobacco, snuff, pipe tobacco, roll-your-own, cigarette papers and tubes), it wants the same arithmetic:</p>
+  <div class="cards">
+    <div><span class="k">Opening</span><div class="v">On hand at the start of the month — which must equal last month's closing figure.</div></div>
+    <div><span class="k">Additions</span><div class="v">Manufactured, received in bond from other factories, returned to bond.</div></div>
+    <div><span class="k">Removals</span><div class="v">Removed tax-paid, removed without payment of tax (export, in-bond transfers), used in manufacture, destroyed, lost.</div></div>
+    <div><span class="k">Closing</span><div class="v">On hand at month-end — and it has to equal the physical count you can support.</div></div>
+  </div>
+  <p>Opening + additions − removals = closing. If it doesn't, the report is wrong somewhere, and the tax due (which follows the tax-paid removals) is wrong with it. Importers report the same movements for imported product on Form 5220.6. FDA's user-fee submission (Form 3852) uses the same removal figures, so an error here shows up in two agencies' records.</p>
+  <div class="note caution">This guide describes a bookkeeping routine. It is not legal or tax advice. The forms, their instructions and 27 CFR Part 40 govern; confirm the current revision of each form on TTB.gov before relying on any line description here.</div>
+
+  <h2 id="records">The records behind every line</h2>
+  <p>27 CFR Part 40 requires manufacturers to keep records that support the report — and TTB examines the records, not the form. Each report line should trace to a source you can produce:</p>
+  <table>
+    <thead><tr><th>Report figure</th><th>Source record</th><th>What has to agree</th></tr></thead>
+    <tbody>
+      <tr><td>Manufactured</td><td>Production records by class and date</td><td>Sum of production for the month, by class; units consistent (pounds, sticks, count)</td></tr>
+      <tr><td>Received in bond</td><td>Transfer-in documents from the shipping factory</td><td>Every receipt matches a transfer document with the other permittee's number</td></tr>
+      <tr><td>Removed tax-paid</td><td>Shipping / sales records, tax computation</td><td>Quantities × rate = tax reported on the return; dates fall in the period</td></tr>
+      <tr><td>Removed without payment of tax</td><td>Export documents, in-bond transfer-out records</td><td>Each removal has the required proof (export evidence, receiving permittee)</td></tr>
+      <tr><td>Destroyed / lost</td><td>Destruction notices, loss claims</td><td>Supervised or approved as the rules require; no "balancing" losses</td></tr>
+      <tr><td>Closing on hand</td><td>Physical inventory count</td><td>Count agrees with book closing; differences explained, not absorbed</td></tr>
+    </tbody>
+  </table>
+  <p>Keep the unit of measure consistent across a class for the whole month. A production log in pounds and a shipping log in cases will reconcile only if the conversion factor is written down and applied the same way every time.</p>
+
+  <h2 id="recon">The reconciliation to run before you sign</h2>
+  <ol>
+    <li><b>Carry-forward check.</b> This month's opening for every class equals last month's filed closing. If you corrected last month, the correction has to be visible, not silently rolled in.</li>
+    <li><b>Book roll-forward.</b> Opening + manufactured + received + returned − every removal category = book closing, per class. Do it in exact arithmetic, not a spreadsheet that rounds.</li>
+    <li><b>Physical-to-book.</b> Compare book closing with the counted inventory. A difference is a finding: overage, shortage, a miscoded removal, or a count error. Name it and resolve it; do not book a loss to make the numbers meet.</li>
+    <li><b>Tax tie-out.</b> Tax-paid removals × the rate for each class equals the tax on your return for the same period. Any difference is either a rate table problem or a period cut-off problem.</li>
+    <li><b>Document completeness.</b> Every in-bond receipt, in-bond removal, export and destruction has its supporting document on file for the month. A missing document is an exception, even if the quantity is right.</li>
+    <li><b>Cross-form consistency.</b> The removal figures you give FDA on 3852 are the same figures on 5210.5. Two agencies, one set of numbers.</li>
+  </ol>
+  <div class="note">The reconciliation should produce the same result every time it is run on the same records. If a re-run gives a different answer, something in the process — a manual adjustment, a rounding, a stale mapping — is not being recorded.</div>
+
+  <h2 id="errors">The errors that show up in examinations</h2>
+  <ul>
+    <li><b>Opening ≠ prior closing.</b> Usually a correction made after filing and never reported.</li>
+    <li><b>Unit mix-ups.</b> Pounds vs. units, cases vs. sticks, especially when a supplier's paperwork changes format.</li>
+    <li><b>Period cut-off.</b> A removal shipped on the 31st, invoiced on the 1st, and reported in the wrong month — so the tax is in the wrong month too.</li>
+    <li><b>Balancing losses.</b> A "loss" entered to make book equal count, with no notice or claim behind it.</li>
+    <li><b>Missing transfer documents.</b> The quantity is right but the in-bond paperwork that makes it tax-free is not on file.</li>
+    <li><b>Class misassignment.</b> A product reported under the wrong class, which changes the rate and the tax.</li>
+  </ul>
+
+  <h2 id="checklist">Month-end checklist</h2>
+  <ul class="check">
+    <li>Opening balances per class equal last month's filed closing.</li>
+    <li>Production, receipts and returns recorded for the full month with consistent units.</li>
+    <li>Every removal categorised: tax-paid, without payment of tax, used in manufacture, destroyed, lost.</li>
+    <li>Book roll-forward computed per class; arithmetic exact.</li>
+    <li>Physical count taken and compared with book closing; every difference explained.</li>
+    <li>Tax on tax-paid removals agrees with the return.</li>
+    <li>Supporting documents on file for every in-bond, export and destruction entry.</li>
+    <li>FDA 3852 figures match 5210.5.</li>
+    <li>Draft reviewed by the responsible officer; signed copy and evidence package retained.</li>
+  </ul>
+  <p><a href="ttb-5210-5-month-end-checklist.pdf" download>Download this checklist as a one-page PDF ↓</a></p>
+
+  <h2 id="faq">Questions people ask</h2>
+  <h3>Do I still file if there was no activity?</h3><p>Yes — a report with zeros is different from a missing report. An explicit zero-activity declaration is a fact; a blank is a gap.</p>
+  <h3>How long do I keep the records?</h3><p>Part 40 sets a minimum of three years from the date of the report (TTB can extend it). Keep the source records, the reconciliation and the signed report together for the whole period.</p>
+  <h3>Can software file this for me?</h3><p>Software can prepare and validate the draft. The permittee's authorised officer reviews, certifies and files. LeafLedger works that way on purpose: it prepares, flags and keeps the evidence; it never certifies or submits.</p>
+
+  <p><a href="tobacco-rollforward-check.html">Check one class now with the free roll-forward check.</a></p>
+  <div class="cta">
+    <p class="eyebrow">DO THIS WITH A PAPER TRAIL</p>
+    <h2>LeafLedger prepares the draft and runs every check above.</h2>
+    <p>Map your production, transfer and shipping exports once. Each month, bring in the files; LeafLedger rolls the classes forward in exact arithmetic, compares book to count, flags every missing document and inconsistency by name, and prepares TTB 5210.5 / 5220.6 and FDA 3852 draft packages with the evidence attached — on your own Windows computer. $199.00/month, 30-day no-card trial.</p>
+    <a class="btn" href="https://license.getleafledger.com/trial">Start free trial ↗</a> &nbsp; <a href="./tutorial.html">See the walkthrough first</a>
+  </div>
+<aside class="ms-store-cta" style="margin:40px 0 8px;padding:20px 22px;border:1px solid rgba(127,127,127,.35);border-radius:10px;display:flex;flex-wrap:wrap;gap:16px;align-items:center"><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&cid=ll-ttb-5210-5-monthly-report" rel="noopener"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="180" alt="Get LeafLedger from the Microsoft Store"></a><p style="margin:0;flex:1 1 260px">LeafLedger is in the Microsoft Store. Microsoft checks and signs Store apps, so Windows installs it without an unknown-publisher warning.</p></aside></main>
+
+<script src="/lead-source.js" defer></script></body>
+</html>

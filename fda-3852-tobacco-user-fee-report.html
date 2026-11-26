@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#112c25">
+  <link rel="icon" href="/icon-512.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .tutorial{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+    .tutorial h1{font-size:38px;line-height:1.1;margin:8px 0 14px}
+    .tutorial h2{font-size:24px;margin:40px 0 10px}
+    .tutorial h3{font-size:19px;margin:28px 0 8px}
+    .tutorial p,.tutorial li{color:var(--ink);line-height:1.6}
+    .muted{color:var(--muted);font-size:15px}
+    video{width:100%;max-width:100%;aspect-ratio:16/10;background:#000;border-radius:8px;border:1px solid var(--line)}
+    .links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:14px 0 6px}
+    .toc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:16px 22px;margin:22px 0}
+    .toc ol{margin:6px 0 0;padding-left:20px}
+    .notice{background:#fbecd3;color:#5d3d0a;padding:12px 16px;border-radius:6px;margin:18px 0}
+    code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+    ul.check{list-style:none;padding:0}ul.check li::before{content:"☐ ";color:var(--muted)}
+  </style>
+<title>FDA Form 3852 Tobacco User Fee Report Guide | LeafLedger</title>
+<meta name="description" content="What FDA 3852 asks of tobacco manufacturers and importers each month — the six product rows, the manufacturer and importer columns, the TTB and CBP records that back every figure, the 20th-of-the-month deadline, and the reconciliation that keeps FDA and TTB numbers identical.">
+<link rel="canonical" href="https://getleafledger.com/fda-3852-tobacco-user-fee-report.html">
+<meta property="og:type" content="article"><meta property="og:site_name" content="LeafLedger"><meta property="og:title" content="FDA Form 3852 Tobacco User Fee Report Guide | LeafLedger"><meta property="og:description" content="What FDA 3852 asks of tobacco manufacturers and importers each month — the six product rows, the manufacturer and importer columns, the TTB and CBP records that back every figure, the 20th-of-the-month deadline, and the reconciliation that keeps FDA and TTB numbers identical."><meta property="og:url" content="https://getleafledger.com/fda-3852-tobacco-user-fee-report.html"><meta name="twitter:card" content="summary">
+
+<style>
+  .g{max-width:860px;margin:0 auto;padding:40px 20px 80px;line-height:1.6}
+  .g h1{font-size:38px;line-height:1.1;margin:8px 0 14px}.g h2{font-size:24px;margin:40px 0 10px}.g h3{font-size:18px;margin:26px 0 6px}
+  .g p,.g li{max-width:720px}.g ul,.g ol{padding-left:22px}.g li{margin-bottom:7px}
+  .g .lede{font-size:18px;opacity:.85;max-width:720px}
+  .g .toc{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:13px;margin:10px 0 0;letter-spacing:.02em}.g .toc a{text-decoration:none;opacity:.8}.g .toc a:hover{opacity:1;text-decoration:underline}
+  .g .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0 6px}
+  .g .cards div{border:1px solid rgba(0,0,0,.15);border-radius:8px;padding:14px 16px;background:rgba(255,255,255,.55)}
+  .g .cards .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}.g .cards .v{margin-top:6px;font-size:15px}
+  .g table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0 6px;background:rgba(255,255,255,.55)}
+  .g th,.g td{text-align:left;padding:9px 11px;border-bottom:1px solid rgba(0,0,0,.15);vertical-align:top}.g th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;font-weight:600}
+  .g .check{list-style:none;padding:0;max-width:720px}.g .check li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,.18)}.g .check li::before{content:"";width:15px;height:15px;border:1.5px solid currentColor;border-radius:3px;margin-top:5px;opacity:.7}
+  .g .note{border-left:3px solid currentColor;padding:10px 14px;margin:14px 0;max-width:720px;background:rgba(0,0,0,.04);font-size:15px}
+  .g .caution{background:rgba(160,40,40,.07);border-left-color:#7a2626}
+  .g .cta{border:1px solid rgba(0,0,0,.15);border-radius:10px;padding:24px 26px;margin-top:36px;background:rgba(255,255,255,.6)}
+  .g .cta h2{margin-top:0}.g .cta .btn{display:inline-block;padding:11px 20px;border-radius:6px;background:#173e32;color:#fff !important;text-decoration:none;font-weight:600;margin-top:8px}
+  @media print{header,footer,.g .cta,.g .toc{display:none}.g{padding:0}}
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "HowTo", "name": "FDA Form 3852 tobacco user-fee report: rows, columns, deadline, and how to tie it to TTB", "description": "What FDA 3852 asks of tobacco manufacturers and importers each month — the six product rows, the manufacturer and importer columns, the TTB and CBP records that back every figure, the 20th-of-the-month deadline, and the reconciliation that keeps FDA and TTB numbers identical.", "step": [{"@type": "HowToStep", "name": "Assemble the supporting records", "text": "Manufacturers: TTB 5210.5 and the 5000.24 excise return. Importers: TTB 5220.6 and CBP 7501 entries."}, {"@type": "HowToStep", "name": "Fill the six category rows", "text": "Cigarettes (row 9) and cigars (10) in sticks; snuff (11), chewing tobacco (12), pipe tobacco (13), roll-your-own (14) in pounds."}, {"@type": "HowToStep", "name": "Use the right columns", "text": "Manufacturer quantity/tax in columns A/B, importer in C/D."}, {"@type": "HowToStep", "name": "Reconcile to TTB before signing", "text": "Removed-tax-paid quantities and tax on 3852 equal the TTB report and return for the same month."}, {"@type": "HowToStep", "name": "File by the 20th", "text": "Due the 20th of the month following the reporting month; the responsible officer certifies in fields 15.A–D."}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When is FDA Form 3852 due?", "acceptedAnswer": {"@type": "Answer", "text": "The 20th day of the month following the reporting month, every month, including months with no removals."}}, {"@type": "Question", "name": "Which records support FDA 3852?", "acceptedAnswer": {"@type": "Answer", "text": "For manufacturers TTB 5210.5 and the excise tax return TTB 5000.24; for importers TTB 5220.6 and the CBP 7501 entry summaries."}}, {"@type": "Question", "name": "Do FDA 3852 and TTB 5210.5 have to match?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. They report the same month's tax-paid removals; a difference is a finding at one agency or the other."}}]}]</script>
+  <link rel="apple-touch-icon" href="/icon-512.png">
+</head>
+<body><div id="ppg-home-strip" style="background:#0b211b;color:#fff;font:600 15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;padding:10px 16px;text-align:center;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;align-items:center"><span>Free 30-day trial. No card, no automatic charge.</span><a href="https://license.getleafledger.com/trial" style="background:#fff;color:#0b211b;padding:7px 14px;border-radius:6px;text-decoration:none;font-weight:700">Start free trial</a><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&amp;cid=ll-strip-fda-3852-tobacco-user-fee-repo" style="color:#fff;text-decoration:underline;text-underline-offset:3px">or get it from the Microsoft Store</a></div>
+  <div class="dark-opening">
+    <header class="header wrap">
+      <a class="brand" href="./" aria-label="LeafLedger home"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a>
+    </header>
+  </div>
+  
+<main class="g" id="main">
+  <p class="eyebrow">LEAFLEDGER · GUIDE</p>
+  <h1>FDA Form 3852: monthly tobacco user-fee reporting</h1>
+  <p class="lede">FDA funds its tobacco program with user fees assessed on manufacturers and importers, in proportion to each company's share of the market. Form 3852 is the monthly statement that share is computed from. Here is what it asks, what backs each figure, and how to investigate differences between FDA and TTB supporting records.</p>
+  <nav class="toc" aria-label="On this page"><a href="#what">What it asks</a><a href="#rows">Rows and columns</a><a href="#support">Supporting records</a><a href="#recon">Tie-out to TTB</a><a href="#deadline">Deadline and certification</a><a href="#checklist">Checklist</a></nav>
+
+  <section class="note" aria-labelledby="quick-start">
+    <h2 id="quick-start" style="margin-top:0">Start your monthly FDA 3852 preparation</h2>
+    <p>For U.S. domestic manufacturers and importers subject to tobacco user-fee reporting. FDA requires the prior month's removal and excise-tax information by the 20th of each month; quarterly assessment payments are a separate step. Check the <a href="https://www.fda.gov/tobacco-products/manufacturing/tobacco-user-fees">official FDA requirements and current form</a>, including current cigar-specific notices.</p>
+    <p><a href="#checklist">Review the month-end checklist</a> · <a href="fda-3852-month-end-checklist.pdf" download>Download the preparation checklist</a> · <a href="./tutorial.html">See the practice walkthrough</a></p>
+    <p>Start with the walkthrough before using customer records. LeafLedger prepares supported drafts; your responsible officer reviews, certifies and submits them.</p>
+  </section>
+  <h2 id="what">What the form asks</h2>
+  <p>Form 3852 (current revision 09/2025) reports, for one calendar month, the quantity of tobacco products <b>removed subject to tax</b> (manufacturers) or <b>entered / released for consumption</b> (importers), and the federal excise tax on them, by product category. FDA uses the tax figures across all filers to allocate the year's user fees. Identity fields carry the company's mailing address (1.A), EIN (2) and a contact (3–5); the responsible officer certifies in 15.A–D.</p>
+  <div class="note caution">This is a plain-English explanation, not legal or tax advice. The current form, its instructions and 21 CFR Part 1150 govern; confirm the revision at fda.gov before relying on any row number here.</div>
+
+  <h2 id="rows">Rows and columns</h2>
+  <table>
+    <thead><tr><th>Row</th><th>Category</th><th>Unit</th><th>Classes rolled into it</th></tr></thead>
+    <tbody>
+      <tr><td>9</td><td>Cigarettes</td><td>sticks</td><td>small and large cigarettes</td></tr>
+      <tr><td>10</td><td>Cigars</td><td>sticks</td><td>small and large cigars</td></tr>
+      <tr><td>11</td><td>Snuff</td><td>pounds</td><td>snuff</td></tr>
+      <tr><td>12</td><td>Chewing tobacco</td><td>pounds</td><td>chewing tobacco</td></tr>
+      <tr><td>13</td><td>Pipe tobacco</td><td>pounds</td><td>pipe tobacco</td></tr>
+      <tr><td>14</td><td>Roll-your-own</td><td>pounds</td><td>roll-your-own</td></tr>
+    </tbody>
+  </table>
+  <p>Columns: <b>A</b> quantity and <b>B</b> tax for manufacturers; <b>C</b> quantity and <b>D</b> tax for importers. A company holding both roles fills both sides from separate records. A category with no activity is reported as an explicit zero — a blank is a gap, not a zero.</p>
+
+  <h2 id="support">The records behind each figure</h2>
+  <div class="cards">
+    <div><span class="k">Manufacturer</span><div class="v"><b>TTB 5210.5</b> (monthly report — the tax-paid removals by class) and <b>TTB 5000.24</b> (the excise tax return — the tax amounts).</div></div>
+    <div><span class="k">Importer</span><div class="v"><b>TTB 5220.6</b> (monthly importer report) and the <b>CBP 7501</b> entry summaries (volume in block 31, tax in block 38 — excise tax only, not duties or other fees).</div></div>
+  </div>
+  <p>Two things the form itself does not model and you must handle in your records: shortages and adjustments on the manufacturer side, and separating excise tax from the other charges on a CBP entry on the importer side.</p>
+
+  <h2 id="recon">The tie-out to TTB</h2>
+  <ol>
+    <li><b>Same month.</b> 3852 for August is built from August's 5210.5 / 5220.6 and August's 5000.24 / 7501s — not from shipments invoiced in August.</li>
+    <li><b>Classes roll up correctly.</b> Small + large cigarettes = row 9; small + large cigars = row 10. Get the per-class figures from the TTB report, then add.</li>
+    <li><b>Units match.</b> Sticks for cigarettes and cigars, pounds for everything else — exactly as on the TTB report.</li>
+    <li><b>Tax equals the return.</b> Column B (or D) per row equals the tax on the return (or the CBP entries) for that class group. A difference is a rate table or cut-off problem.</li>
+    <li><b>Every category has a fact.</b> Activity, or an explicit zero. Nothing inferred.</li>
+  </ol>
+  <div class="note">Because the same removals appear on two agencies' forms, the safest process prepares both from one reconciled ledger and only then renders the forms — so a correction lands in both places or neither.</div>
+
+  <h2 id="deadline">Deadline and certification</h2>
+  <p>Due the <b>20th of the month following</b> the reporting month (a zero-activity month is still due). Fields 15.A–D are the responsible officer's certification: software can prepare and check the draft, but the officer signs and submits. Keep the draft, the supporting TTB/CBP records and the reconciliation together for the retention period that applies to you.</p>
+
+  <h2 id="checklist">Month-end checklist</h2>
+  <ul class="check">
+    <li>TTB 5210.5 / 5220.6 for the month finalised first.</li>
+    <li>Tax return (5000.24) or CBP entries (7501) for the same month on file.</li>
+    <li>Classes rolled up into rows 9–14 with the right units.</li>
+    <li>Columns A/B or C/D per role; both if you hold both permits.</li>
+    <li>Quantities and tax equal the TTB figures, row by row.</li>
+    <li>Every category has activity or an explicit zero.</li>
+    <li>Identity fields current (address, EIN, contact).</li>
+    <li>Officer reviewed and certified; filed by the 20th; package retained.</li>
+  </ul>
+  <p><a href="fda-3852-month-end-checklist.pdf" download>Download this checklist as a one-page PDF ↓</a></p>
+
+  <div class="cta">
+    <p class="eyebrow">ONE LEDGER, BOTH AGENCIES</p>
+    <h2>LeafLedger prepares 3852 from the same reconciled records as your TTB drafts.</h2>
+    <p>Map your exports once; each month LeafLedger rolls every class forward, ties the tax out, flags any category without an explicit fact, and renders TTB 5210.5 / 5220.6 and FDA 3852 as drafts on the official templates with the evidence attached — nothing certified, nothing submitted, nothing uploaded. $199.00/month, 30-day no-card trial.</p>
+    <a class="btn" href="https://license.getleafledger.com/trial">Start free trial ↗</a> &nbsp; <a href="./ttb-5210-5-monthly-report.html">Read the TTB 5210.5 guide</a>
+  </div>
+<aside class="ms-store-cta" style="margin:40px 0 8px;padding:20px 22px;border:1px solid rgba(127,127,127,.35);border-radius:10px;display:flex;flex-wrap:wrap;gap:16px;align-items:center"><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&cid=ll-fda-3852-tobacco-user-fee-report" rel="noopener"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="180" alt="Get LeafLedger from the Microsoft Store"></a><p style="margin:0;flex:1 1 260px">LeafLedger is in the Microsoft Store. Microsoft checks and signs Store apps, so Windows installs it without an unknown-publisher warning.</p></aside></main>
+
+<script src="/lead-source.js" defer></script></body>
+</html>

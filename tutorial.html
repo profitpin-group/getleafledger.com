@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your first month — LeafLedger tutorial</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LeafLedger">
+  <meta property="og:title" content="LeafLedger — TTB 5210.5 / 5220.6 & FDA 3852 tobacco reporting software for manufacturers and importers">
+  <meta property="og:description" content="Windows software that reconciles your monthly tobacco records and prepares TTB 5210.5, TTB 5220.6 and FDA 3852 report drafts with a full paper trail. Runs on your own computer. $199/month, 30-day no-card trial.">
+  <meta property="og:url" content="https://getleafledger.com/tutorial.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="description" content="A narrated walkthrough of the LeafLedger Windows application with fictional practice records: setup, the monthly cycle, review and export.">
+  <meta name="theme-color" content="#112c25">
+  <link rel="canonical" href="https://getleafledger.com/tutorial.html">
+  <link rel="icon" href="/icon-512.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .tutorial{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+    .tutorial h1{font-size:38px;line-height:1.1;margin:8px 0 14px}
+    .tutorial h2{font-size:24px;margin:40px 0 10px}
+    .tutorial h3{font-size:19px;margin:28px 0 8px}
+    .tutorial p,.tutorial li{color:var(--ink);line-height:1.6}
+    .muted{color:var(--muted);font-size:15px}
+    video{width:100%;max-width:100%;aspect-ratio:16/10;background:#000;border-radius:8px;border:1px solid var(--line)}
+    .links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:14px 0 6px}
+    .toc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:16px 22px;margin:22px 0}
+    .toc ol{margin:6px 0 0;padding-left:20px}
+    .notice{background:#fbecd3;color:#5d3d0a;padding:12px 16px;border-radius:6px;margin:18px 0}
+    code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+    ul.check{list-style:none;padding:0}ul.check li::before{content:"☐ ";color:var(--muted)}
+  </style>
+  <link rel="apple-touch-icon" href="/icon-512.png">
+</head>
+<body><div id="ppg-home-strip" style="background:#0b211b;color:#fff;font:600 15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;padding:10px 16px;text-align:center;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;align-items:center"><span>Free 30-day trial. No card, no automatic charge.</span><a href="https://license.getleafledger.com/trial" style="background:#fff;color:#0b211b;padding:7px 14px;border-radius:6px;text-decoration:none;font-weight:700">Start free trial</a><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&amp;cid=ll-strip-tutorial" style="color:#fff;text-decoration:underline;text-underline-offset:3px">or get it from the Microsoft Store</a></div>
+  <div class="dark-opening">
+    <header class="header wrap">
+      <a class="brand" href="./" aria-label="LeafLedger home"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-wordmark"><span>LeafLedger</span><small>A PROFITPIN GROUP PRODUCT</small></span></a>
+    </header>
+  </div>
+  <main class="tutorial" id="main">
+    <p class="eyebrow">LEAFLEDGER</p>
+    <h1>Your first month.</h1>
+    <p>Learn the monthly workflow with fictional records. You'll need the LeafLedger Windows application. Keep practice separate from your business records and never submit the sample drafts.</p>
+
+    <h2>Watch the walkthrough</h2>
+    <p class="muted">A narrated tour of the Windows application, with highlighted controls and English captions. Pause to follow along with the practice workspace.</p>
+    <video controls playsinline preload="metadata" poster="./tutorial-media/poster.jpg" aria-label="LeafLedger first-month video tutorial">
+      <source src="./tutorial-media/LeafLedger-first-month.mp4" type="video/mp4">
+      <track kind="captions" src="./tutorial-media/captions.vtt" srclang="en" label="English" default>
+      Your browser does not support video. <a href="./tutorial-media/LeafLedger-first-month.mp4">Download the walkthrough</a>.
+    </video>
+    <div class="links">
+      <a class="button button-lime" href="./LeafLedger-Practice.zip" download>Download practice workspace ↓</a>
+      <a href="./tutorial-media/LeafLedger-first-month.mp4" download>Download the video</a> · <a href="./tutorial-media/transcript.txt">Read the transcript</a>
+    </div>
+    <div class="notice">Every company, permit number, address and figure in the practice set is fictional. The drafts it produces are watermarked and must not be filed.</div>
+
+    <div class="toc"><strong>On this page</strong>
+      <ol>
+        <li><a href="#open">Open the practice workspace</a></li>
+        <li><a href="#setup">Look at the setup</a></li>
+        <li><a href="#sources">Add the month's source files</a></li>
+        <li><a href="#prepare">Prepare the month</a></li>
+        <li><a href="#review">Read the review</a></li>
+        <li><a href="#missing">Practice a missing fact</a></li>
+        <li><a href="#keep">Keep and recover your work</a></li>
+      </ol></div>
+
+    <h3 id="open">1. Open the practice workspace</h3>
+    <p>Extract the ZIP to a folder on your computer, for example <code>C:\LeafLedger-Practice</code>. Start LeafLedger and point it at the extracted <code>LeafLedger-Practice</code> folder — either from the prompt it shows on first start, or by running <code>LeafLedger.exe C:\LeafLedger-Practice\LeafLedger-Practice</code>. The overview shows <em>Setup complete</em>.</p>
+
+    <h3 id="setup">2. Look at the setup</h3>
+    <p>Open <strong>Setup</strong>. Two fictional companies — Riverbend Tobacco Works LLC (manufacturer) and Harbor Leaf Imports LLC (importer) — one permit each, one product each (small cigarettes), the source file layouts, the account mapping and the evidence files for August 2026 are already entered. Read each card; this is what you enter once for your own business.</p>
+
+    <h3 id="sources">3. Add the month's source files</h3>
+    <p>Open <strong>Monthly cycle</strong>, type <code>2026-08</code> and click <strong>Load month</strong>. Add <code>sources/manufacturer_month.csv</code> with the <em>manufacturer</em> profile and <code>sources/importer_month.csv</code> with the <em>importer</em> profile. Both are in the practice folder.</p>
+
+    <h3 id="prepare">4. Prepare the month</h3>
+    <p>Click <strong>Prepare this month</strong>. LeafLedger reads every row, checks every captured rule and renders the drafts. The status should show numbers <strong>RECONCILED</strong> and the month <strong>REVIEW REQUIRED</strong>.</p>
+
+    <h3 id="review">5. Read the review</h3>
+    <p>Open <strong>Review &amp; export</strong>. Two kinds of item stay open on purpose: <code>MISSING_OFFICIAL_SUPPORT</code> (the official copy of a form is not among the evidence) and <code>OFFICIAL_RENDERING_UNVALIDATED</code> (drafts are watermarked). Scroll to the draft lines: line 7.d, opening stock, is 100,000 sticks, and every number names the source rows behind it. Open a PDF. Nothing here is submitted.</p>
+
+    <h3 id="missing">6. Practice a missing fact</h3>
+    <p>Back in <strong>Setup</strong>, remove the mapping for <code>taxable_removal</code> under Account mapping and save. Prepare <code>2026-08</code> again with the correction reason "practice". The month now stops on an unknown account instead of guessing. Add the mapping back, save, and prepare once more; the result returns. For a real business, obtain the fact before mapping it — never copy the sample.</p>
+
+    <h3 id="keep">7. Keep and recover your work</h3>
+    <p><strong>History</strong> lists every preparation; corrections supersede, nothing is deleted. On the overview, create an encrypted backup with a passphrase you choose; the passphrase is never stored, so keep it safe.</p>
+
+    <h3>Quick checklist</h3>
+    <ul class="check">
+      <li>Practice workspace opened, setup complete</li>
+      <li>Two source files added for 2026-08</li>
+      <li>Month prepared: numbers RECONCILED</li>
+      <li>Draft lines read; a PDF opened</li>
+      <li>Missing-fact exercise done and mapping restored</li>
+      <li>Backup created</li>
+    </ul>
+    <p class="muted">Questions: <a href="mailto:support@getleafledger.com">support@getleafledger.com</a></p>
+    <p><a class="button button-lime" href="./">← Back to getleafledger.com</a></p>
+  <aside class="ms-store-cta" style="margin:40px 0 8px;padding:20px 22px;border:1px solid rgba(127,127,127,.35);border-radius:10px;display:flex;flex-wrap:wrap;gap:16px;align-items:center"><a href="https://apps.microsoft.com/detail/9NJJJJMSLD2W?mode=direct&cid=ll-tutorial" rel="noopener"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="180" alt="Get LeafLedger from the Microsoft Store"></a><p style="margin:0;flex:1 1 260px">LeafLedger is in the Microsoft Store. Microsoft checks and signs Store apps, so Windows installs it without an unknown-publisher warning.</p></aside></main>
+<script src="/lead-source.js" defer></script></body>
+</html>
